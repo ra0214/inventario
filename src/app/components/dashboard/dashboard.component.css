@@ -1,0 +1,73 @@
+.dashboard {
+  background-color: #f3f4f6;
+}
+
+.navbar {
+  background-color: #3b82f6;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar button {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #dc2626;
+}
+
+.welcome-message {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.welcome-message h2 {
+  color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.welcome-message p {
+  color: #6b7280;
+  font-size: 1.5rem;
+}
+
+.menu {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.menu button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.content {
+  margin-top: 1.25rem;
+}

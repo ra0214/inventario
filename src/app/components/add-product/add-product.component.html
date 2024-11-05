@@ -1,0 +1,46 @@
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+    <div class="form-group">
+      <label for="name">Nombre del Producto</label>
+      <input id="name" name="name" type="text" required [(ngModel)]="product.name" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descripción</label>
+      <textarea id="description" name="description" required [(ngModel)]="product.description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="stock_boxes">Stock en Cajas</label>
+      <input id="stock_boxes" name="stock_boxes" type="number" required min="0" [(ngModel)]="product.stock_boxes" />
+    </div>
+
+    <div class="form-group">
+      <label for="stock_individual">Stock Individual</label>
+      <input id="stock_individual" name="stock_individual" type="number" required min="0" [(ngModel)]="product.stock_individual" />
+    </div>
+
+    <div class="form-group">
+      <label for="deleted">¿Producto Eliminado?</label>
+      <select id="deleted" name="deleted" required [(ngModel)]="product.deleted">
+        <option value="false">No</option>
+        <option value="true">Sí</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="created_at">Fecha de Creación</label>
+      <input id="created_at" name="created_at" type="date" required [(ngModel)]="product.created_at" />
+    </div>
+
+    <div class="form-group">
+      <label for="updated_at">Fecha de Actualización</label>
+      <input id="updated_at" name="updated_at" type="date" required [(ngModel)]="product.updated_at" />
+    </div>
+
+    <input type="hidden" name="created_by" [(ngModel)]="product.created_by" value="admin" />
+    <input type="hidden" name="updated_by" [(ngModel)]="product.updated_by" value="admin" />
+
+    <button type="submit">Agregar Producto</button>
+  </form>
+</div>

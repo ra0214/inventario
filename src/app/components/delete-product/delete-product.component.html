@@ -1,0 +1,23 @@
+<div class="delete-product-container">
+  <h2>Eliminar Productos</h2>
+  <ul class="product-list">
+    <li *ngFor="let product of products" class="product-item">
+      <label class="product-checkbox">
+        <input 
+          type="checkbox" 
+          [value]="product.product_id" 
+          (change)="onSelectChange(product.product_id!, $event)" 
+        />
+        <span class="checkmark"></span>
+      </label>
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p>ID: {{ product.product_id }}</p>
+        <p>{{ product.description }}</p>
+        <p class="stock-info">Stock Individual: <strong>{{ product.stock_individual }}</strong> unidades</p>
+        <p class="stock-info">Stock por Cajas: <strong>{{ product.stock_boxes }}</strong> unidades</p>
+      </div>
+    </li>
+  </ul>
+  <button class="delete-button" (click)="deleteSelectedProducts()">Eliminar Seleccionados</button>
+</div>

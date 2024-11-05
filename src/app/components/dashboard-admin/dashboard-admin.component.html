@@ -1,0 +1,21 @@
+<div class="dashboard">
+    <nav class="navbar">
+        <h1>Dashboard</h1>
+        <button (click)="logout()">Logout</button>
+    </nav>
+  
+    <div class="welcome-message">
+        <h2>¡Bienvenido a tu Dashboard!</h2>
+        <p>Administra tus productos de manera eficiente y rápida.</p>
+    </div>
+  
+    <div class="menu">
+        <button routerLink="/dashboard-admin/products-admin">Products</button>
+        <button routerLink="/dashboard-admin/delete-product-admin">Delete Product</button>
+    </div>
+  
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+  

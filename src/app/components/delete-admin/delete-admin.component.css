@@ -1,0 +1,101 @@
+.delete-product-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .product-item:last-child {
+    border-bottom: none; 
+  }
+  
+  .product-checkbox {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .product-checkbox input {
+    display: none; 
+  }
+  
+  .product-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+  }
+  
+  .product-checkbox input:checked + .checkmark {
+    background-color: #007bff;
+  }
+  
+  .product-checkbox .checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  
+  .product-checkbox input:checked + .checkmark::after {
+    display: block;
+  }
+  
+  .product-info {
+    flex-grow: 1;
+  }
+  
+  .product-info h3 {
+    margin: 0;
+    color: #007bff;
+  }
+  
+  .product-info p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .stock-info {
+    font-weight: bold;
+  }
+  
+  .delete-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #c9302c;
+  }  

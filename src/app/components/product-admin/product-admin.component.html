@@ -1,0 +1,54 @@
+<div class="product-list-container">
+    <h2 class="title">Lista de Productos</h2>
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Stock (Cajas)</th>
+          <th>Stock (Individual)</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products" class="product-row">
+          <td>{{ product.product_id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.stock_boxes }}</td>
+          <td>{{ product.stock_individual }}</td>
+          <td>
+            <button (click)="editProduct(product)" class="edit-button">Editar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="selectedProduct" class="edit-product-container">
+      <h3>Editar Producto</h3>
+      <form [formGroup]="productForm" (ngSubmit)="updateProduct()" class="edit-product-form">
+        <div class="form-group">
+          <label>Nombre:</label>
+          <input type="text" formControlName="name" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <label>Descripción:</label>
+          <input type="text" formControlName="description" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <label>Stock (Cajas):</label>
+          <input type="number" formControlName="stock_boxes" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <label>Stock (Individual):</label>
+          <input type="number" formControlName="stock_individual" required class="form-input" />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="submit-button">Actualizar</button>
+          <button type="button" (click)="selectedProduct = null; productForm.reset()" class="cancel-button">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
